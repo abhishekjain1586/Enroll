@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#202427">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="20dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="30dp"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="30dp"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_mobileno_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+        app:layout_constraintRight_toRightOf="@+id/guideline2"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="give us your \nmobile number"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_mobileno_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobileno_title"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_mobileno_title"
+        app:layout_constraintRight_toRightOf="@+id/guideline2"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:text="to enroll we need your mobile number" />
+
+    <EditText
+        android:id="@+id/edt_mobileno_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mobileno_desc"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_mobileno_desc"
+        app:layout_constraintRight_toRightOf="@+id/guideline2"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="Mobile Number"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_button"
+        android:text="Continue"
+        android:textColor="#BFAC9B"
+        android:textSize="24sp"
+        android:textAllCaps="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
